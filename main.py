@@ -21,25 +21,25 @@ else:
 
 print("What grade are you in?")
 grade=input().lower()
-if grade=="6"or"7"or"8":
+if grade=="6" or grade=="7" or grade=="8":
     print("Looks like you are a middle schooler!")
-elif grade=="k"or"K"or"1"or"2"or"3"or"4"or"5":
+elif grade=="k"or grade=="K"or grade=="1"or grade=="2"or grade=="3"or grade=="4"or grade=="5":
     print("Looks like you are in elementary school!")
-elif grade=="9"or"10"or"11"or"12":
+elif grade=="9"or grade=="10"or grade=="11"or grade=="12":
     print("Looks like you are in high school")
 else:
     print("That's cool too")
 
-print("Do you like sports?(like/do not like)")
-sport=input().lower()
-if sport=="like":
+print("Do you like sports?(yes/no)")
+sport_response=input().lower()
+if sport_response=="yes":
     print("what sport do you play?")
-    sport2=input().lower
-    print("Nice!")
-elif sport=="do not like":
+    sport=input().lower
+    print(f"Nice! {sport} is a fun sport to play!")
+elif sport_response=="no":
     print("Oh, then what do you like to do?(one word)")
     other=input().lower
-    print("Cool")
+    print("That is cool")
    
 
 print(f"It has been nice chating with you {name}, bye bye")
