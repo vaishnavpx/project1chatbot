@@ -19,6 +19,16 @@ while True:
         continue
     if user_input.lower()=="exit":
         print(f"{Fore.BLUE}Exiting the sentiment spy program, Agent {username}{Style.RESET_ALL}")
+        print(f"{Fore.CYAN}Conversation summary:{Style.RESET_ALL}")
+        for idx,(text,polarity,sentiment_type) in enumerate(conversation_history,start=1):
+            if sentiment_type=="Positive":
+                color=Fore.GREEN
+            elif sentiment_type=="Negative":
+                color=Fore.RED
+            else:
+                color=Fore.YELLOW
+
+                print(f"{idx}.{color}{text}"f"(Polarity:{polarity:.2f},{sentiment_type}){Style.RESET_ALL}")
         break
     elif user_input.lower()=="reset":
         conversation_history.clear()
